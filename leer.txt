@@ -1,0 +1,18 @@
+Buenas noches Profesor!
+
+Ante todo le pido disculpas porque no cumplí con todos los requisitos del TPO
+Le paso a detallar los puntos y lo que realicé en cada uno :
+
+1)La web tiene 3 secciones en el HTML 
+2)Formulario: Me faltó la validación, me fallaban las funciones que habia creado, no validaba y se me desarmaba cuando queria mostrar en pantalla el .innerHTML/innerTEXT con el mensaje 
+3)iframe: Agregué un mapa de la ubicación en el Home de mi web, en cuanto a íconos no pude ponerlos de FontAwesome , lo que realicé fué descargarlos de Flaticon y ponerlo como imágenes. Utilicé google Fonts (2 tipografias)
+4)No logré hacer el responsive
+5)Animación: Zoom-in en el titulo. Transicion en el footer cuando pasamos por los iconos
+6)Utilice flexbox y grid
+7)No utilicé bootstrap
+  
+  *En la seccion productos quise realizar una funcion que me permita visualizar los pñroductos cuando hago click en la seccion "tortas"
+  pero cuando renderiza se rompía. 
+
+
+  

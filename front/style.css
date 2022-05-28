@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.franja-animada{
+    display: flex;
+    background-color: #F5F5DC;
+    color: #ff80ff;
+    width:100vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin: 0px;
+    
+}
+.coche-img{
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+}
+.titulo{
+    margin-top: 0;
+    width: 100vw;
+    height: 25vh;
+    background-color: #FFF0F5;
+    color: #ff80ff
+ 
+}
+section h1{
+    padding: 30px;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'M PLUS 1p', sans-serif;
+     
+}
+section h2{
+    text-align: center;
+
+}
+nav{
+    background-color:#F5F5DC;
+    width: 100vw;
+    height: 8vh;
+    align-items: center
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+nav ul li{
+    margin: 15px 100px;
+    font-size: 18px;
+    color: black;
+    font-family: 'M PLUS 1p', sans-serif;
+
+}
+nav ul li:hover{
+    color: #ff80ff;
+    text-decoration: underline;
+    font-size: 25px;
+    cursor: pointer;
+}
+.bienvenidos{
+    background-image: url("/img/baner.png");
+    width: 100vw;
+    height: 35vh;
+    color:#F5F5DC;
+    font-size: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.descripcion{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5DC;
+}
+.quien-somos{
+  font-family: 'M PLUS 1p', sans-serif;
+}
+.parrafo-1{
+    font-family: 'M PLUS 1p', sans-serif;
+
+}
+.img-1{
+    border-radius: 10px;
+    margin: 10px;
+    width: auto;
+    height:max-content
+    
+}
+
+section aside{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 70px;
+
+}
+aside h3{
+    text-align: center;
+    font-size: 35px;
+     
+}
+aside p{
+    margin: 75px;
+    align-items: center;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    font-size: 25px;
+    line-height: 50px
+  
+}
+.mapa{
+    width: 100vw;
+   
+}
+footer{
+    margin-top: 30px;
+    background-image: url("/img/baner.png");
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly
+}
+footer ul{
+    align-items: center;
+    font-size: 25px;
+    margin-top: 10px;
+   
+}
+.h2-footer{
+font-family: 'M PLUS 1p', sans-serif;
+}
+ul li img{
+ transition: 2s;
+}
+ul li img:hover{
+    width: 50px;
+}
+
+/*ESTILOS SECCION PRODUCTOS*/
+
+.contenedor-1{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 100%;    
+    grid-template-rows: 33% 33% 33%;
+    row-gap: 1em;
+    height: 60vh;
+
+    
+}
+.contenedor-1 div{
+    padding: 25px;
+    width: 100vw;
+    font-size: 60px;
+    text-align: center;
+    background-color: #ff80ff;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #F5F5DC;
+}
+.contenedor-1 div:hover{
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+/*PRODUCTOS ---->>>clases ocultas*/
+
+#variedad-torta{
+    display:grid;
+    justify-content:center;
+
+}
+#fila{
+display: grid;
+grid-template-columns: 350px 350px 350px ;
+grid-template-rows: 350px 350px 350px;
+grid-gap: 2px 2px;
+justify-items: stretch;
+align-items: center;
+justify-content: space-evenly;
+grid-auto-flow: column;
+
+    
+}
+.visible{
+   display: grid;
+  
+}
+.titulo-grid{
+    font-size: 35px;
+         
+}
+.precio-grid{
+    font-size: 28px;
+}
+
+/*Estilos contacto*/
+form{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'M PLUS 1p', sans-serif; 
+    line-height:55px;
+    background: linear-gradient(#F5F5DC, #ff80ff)
+}
+form input{
+    width: 50vw;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid #F5F5DC
+}
+#envio{
+    width: 70px;
+    text-align: center;
+    margin: 10px;
+
+}
+#zona{
+    margin:15px;
+    border-radius: 10px;
+    border: 2px solid #F5F5DC;
+  
+}
+.area{
+    width: 50vw;
+    height: 25vh;
+    border-radius: 10px;
+    border: 2px solid #F5F5DC;
+    color: grey;
+}
+.btn-form{
+    width: 15vw;
+    height: 10vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    color:#F5F5DC;
+    background-color: #ff80ff;
+   margin: 15px;
+   
+
+}
