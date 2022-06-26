@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: relative
 }
 
 .franja-animada{
@@ -26,28 +27,32 @@
     width: 100vw;
     height: 25vh;
     background-color: #FFF0F5;
-    color: #ff80ff
+    color: #ff80ff;
+    position: relative;
  
 }
-section h1{
-    padding: 30px;
+.magia-titulo{
+    font-family: 'Festive', cursive;
     font-size: 45px;
-    text-align: center;
-    font-family: 'M PLUS 1p', sans-serif;
-     
+    
 }
 section h2{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
     text-align: center;
 
 }
 nav{
     background-color:#F5F5DC;
+    flex-wrap:wrap; 
     width: 100vw;
     height: 8vh;
     align-items: center
 }
 nav ul{
     display: flex;
+    flex-wrap:wrap; 
     justify-content: space-between;
 
 }
@@ -65,7 +70,7 @@ nav ul li:hover{
     cursor: pointer;
 }
 .bienvenidos{
-    background-image: url("/img/baner.png");
+    background-image: url("../img/baner.png");
     width: 100vw;
     height: 35vh;
     color:#F5F5DC;
@@ -77,6 +82,7 @@ nav ul li:hover{
 .descripcion{
     justify-content: center;
     display: flex;
+    flex-wrap:wrap; 
     align-items: center;
     background-color: #F5F5DC;
 }
@@ -85,11 +91,13 @@ nav ul li:hover{
 }
 .parrafo-1{
     font-family: 'M PLUS 1p', sans-serif;
+    
 
 }
 .img-1{
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 10%;
+    margin-top:60px;
+    padding: 10px;
     width: auto;
     height:max-content
     
@@ -122,13 +130,16 @@ aside p{
    
 }
 footer{
+    width: 100%;
     margin-top: 30px;
-    background-image: url("/img/baner.png");
+    background-image: url("../img/baner.png");
     height: 35vh;
     justify-content: center;
     align-items: center;
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    position: absolute;
+    
 }
 footer ul{
     align-items: center;
@@ -147,64 +158,71 @@ ul li img:hover{
 }
 
 /*ESTILOS SECCION PRODUCTOS*/
-
-.contenedor-1{
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 100%;    
-    grid-template-rows: 33% 33% 33%;
-    row-gap: 1em;
-    height: 60vh;
-
-    
-}
-.contenedor-1 div{
-    padding: 25px;
-    width: 100vw;
+#variedad-torta{
+    margin-top: 10px;
+    width: 100%;
+    height: 130px;
     font-size: 60px;
     text-align: center;
+    text-justify: center;
     background-color: #ff80ff;
     font-family: 'M PLUS 1p', sans-serif;
     color: #F5F5DC;
+  
 }
-.contenedor-1 div:hover{
+#variedad-torta:hover{
     color: black;
     border: 2px solid black;
-    cursor: pointer;
+    cursor: pointer
 }
-/*PRODUCTOS ---->>>clases ocultas*/
 
-#variedad-torta{
+#contenedor-1{
     display:grid;
-    justify-content:center;
+    margin-top: 15px;
+    grid-template-columns:350px 350px 350px;
+    grid-template-rows: 350px 350px 350px;
+    row-gap: 15px;
+    text-align: center;
+    justify-content:space-evenly;
 
 }
-#fila{
-display: grid;
-grid-template-columns: 350px 350px 350px ;
-grid-template-rows: 350px 350px 350px;
-grid-gap: 2px 2px;
-justify-items: stretch;
-align-items: center;
-justify-content: space-evenly;
-grid-auto-flow: column;
 
-    
-}
 .visible{
-   display: grid;
+    
+    width: auto;
+    text-align: center;
+    border: var(--border-gray);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    transition:box-shadow 0.5s;
+    background-color: #ff80ff;
+
+}
+.visible:hover{
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+.visible img{
+    margin-top: 7px;
+    width: 70%;
   
 }
 .titulo-grid{
-    font-size: 35px;
-         
+    font-size: 20px;
 }
 .precio-grid{
-    font-size: 28px;
+    font-size: 15px;
 }
+
+
 
 /*Estilos contacto*/
 form{
+    
     text-align: center;
     font-size: 25px;
     font-family: 'M PLUS 1p', sans-serif; 
@@ -218,7 +236,7 @@ form input{
     border-radius: 10px;
     border: 2px solid #F5F5DC
 }
-#envio{
+.envio-radio{
     width: 70px;
     text-align: center;
     margin: 10px;
@@ -242,9 +260,655 @@ form input{
     height: 10vh;
     border-radius: 10px;
     border: 2px solid black;
-    color:#F5F5DC;
-    background-color: #ff80ff;
-   margin: 15px;
+    color:#ff80ff;
+    background-color:#F5F5DC ;
+    margin: 15px;
    
+}
+.btn-form:hover{
+    font-size: 30px;
+    text-decoration: underline;
+    background-color: black;
+    color: #FFF0F5;
+    border: 4px solid  #FFF0F5
+}
+.errores{
+    color: red;
+    width: auto;
+    height: auto;
+    text-align: center
+    
 
 }
+/****************************RESPONSIVE*******************************/
+@media only screen and (max-width: 385px){
+    .magia-titulo{
+        font-family: 'Festive', cursive;
+        font-size: 30px;    
+    }
+    .franja-animada{
+        height: 4vh;
+        font-size: 15px;        
+    }
+    .coche-img{
+        margin-left: 15px;
+        width: 20px;
+        height: 20px;
+    }
+    .titulo{
+       
+        text-align: center;
+        width: 100vw;
+        height: 25vh;
+        background-color: #FFF0F5;
+        color: #ff80ff
+    }
+    section h1,h2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 25px;
+        text-align: center;
+        font-family: 'M PLUS 1p', sans-serif;
+         
+    }
+    nav{
+        background-color:#F5F5DC;
+        display: flex;
+        flex-wrap:wrap; 
+        width: 100vw;
+        height: 20vh;
+        margin-top: 5px;
+      
+    }
+   
+    nav ul li{
+        margin: 15px 100px;
+        font-size: 14px;
+        color: black;
+        text-align:center;
+        font-family: 'M PLUS 1p', sans-serif;
+    
+    }
+    nav ul li:hover{
+        color: #ff80ff;
+        text-decoration: underline;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .area{
+        width: 60vw;
+        height: 15vh;
+        border-radius: 10px;
+        border: 2px solid #F5F5DC;
+        color: grey;
+        font-size: 20px;
+    }
+    form{
+        margin-top:5px;
+        font-size: 15px;
+    }
+    .btn-form{
+        width: 20vw;
+        height: 7vh;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 2px solid black;
+        color:#ff80ff;
+        background-color:#F5F5DC ;
+        margin: 15px;
+       
+    }
+    .btn-form:hover{
+        font-size: 20px;
+    } 
+    form input{
+        width: 40vw;
+        height: 5vh;
+        font-size: 17px;
+    }
+    footer{
+        width: 100%;
+        margin-top: 5px;
+        background-image: url("../img/baner.png");
+        height: 25vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: absolute;
+        
+    }
+    footer ul{
+        align-items: center;
+        font-size: 15px;
+        margin-top: 5px;
+       
+    }
+    .h2-footer{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    }
+    ul li img{
+        width: 20px;
+        height: 20px;
+        transition: 0.2s;
+    }
+    ul li img:hover{
+        width: 30px;
+        height: 30px;
+    }
+    .envio-radio{
+        width: 70px;
+        height: 2vh;
+        text-align: center;
+        margin: 10px;
+    
+    }
+    .descripcion{
+        justify-content: center;
+        display: flex;
+        flex-wrap:wrap; 
+        align-items: center;
+        background-color: #F5F5DC;
+    }
+    .quien-somos{
+      font-family: 'M PLUS 1p', sans-serif;
+      font-size: 20px;
+    }
+    .parrafo-1{
+        width: auto;
+        font-family: 'M PLUS 1p', sans-serif;
+        font-size: 15px;
+    }
+    #contenedor-1{
+        display:grid;
+        margin-top: 15px;
+        grid-template-columns:380px;
+        grid-template-rows:450px;
+        row-gap: 15px;
+        text-align: center;
+        justify-content:space-evenly;
+    
+    }
+}
+
+@media only screen and (min-width:386px){
+    .magia-titulo{
+        font-family: 'Festive', cursive;
+        font-size: 50px;    
+    }
+    .franja-animada{
+        height: 4vh;
+        font-size: 18px;        
+    }
+    .coche-img{
+        margin-left: 15px;
+        width: 25px;
+        height: 25px;
+    }
+    .titulo{
+        margin-top: 5px;
+        text-align: center;
+        width: 100vw;
+        height: 25vh;
+        background-color: #FFF0F5;
+        color: #ff80ff
+    }
+    section h1,h2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 35px;
+        text-align: center;
+        font-family: 'M PLUS 1p', sans-serif;
+         
+    }
+    nav{
+        background-color:#F5F5DC;
+        display: flex;
+        width: 100vw;
+        height: 20vh;
+        margin-top: 5px;
+      
+    }
+    nav ul{  
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: absolute;     
+    }
+    nav ul li{
+        margin: 15px 100px;
+        font-size: 18px;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        font-family: 'M PLUS 1p', sans-serif;
+    
+    }
+    nav ul li:hover{
+        color: #ff80ff;
+        text-decoration: underline;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .area{
+        width: 60vw;
+        height: 15vh;
+        border-radius: 10px;
+        border: 2px solid #F5F5DC;
+        color: grey;
+        font-size: 20px;
+    }
+    form{
+        margin-top:5px;
+        font-size: 15px;
+    }
+    .btn-form{
+        width: 20vw;
+        height: 7vh;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 2px solid black;
+        color:#ff80ff;
+        background-color:#F5F5DC ;
+        margin: 15px;
+       
+    }
+    .btn-form:hover{
+        font-size: 20px;
+    } 
+    form input{
+        width: 40vw;
+        height: 5vh;
+        font-size: 17px;
+    }
+    footer{
+        width: 100%;
+        margin-top: 5px;
+        height: 25vh;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: absolute;
+        
+    }
+    footer ul{
+        align-items: center;
+        font-size: 15px;
+        margin-top: 5px;
+       
+    }
+    .h2-footer{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    }
+    ul li img{
+        width: 20px;
+        height: 20px;
+        transition: 0.2s;
+    }
+    ul li img:hover{
+        width: 30px;
+        height: 30px;
+    }
+    .envio-radio{
+        width: 70px;
+        height: 2vh;
+        text-align: center;
+        margin: 10px;
+    
+    }
+    #contenedor-1{
+        display:grid;
+        margin-top: 15px;
+        grid-template-columns:380px;
+        grid-template-rows:450px;
+        row-gap: 15px;
+        text-align: center;
+        justify-content:space-evenly;
+    
+    }
+   
+}
+@media only screen and (min-width:586px){
+    .magia-titulo{
+        font-family: 'Festive', cursive;
+        font-size: 60px;    
+    }
+    .franja-animada{
+        height: 5vh;
+        font-size: 20px;        
+    }
+    .coche-img{
+        margin-left: 15px;
+        width: 28px;
+        height: 28px;
+    }
+    .titulo{
+        margin-top: 5px;
+        text-align: center;
+        width: 100vw;
+        height: 25vh;
+        background-color: #FFF0F5;
+        color: #ff80ff
+    }
+    section h1,h2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 40px;
+        text-align: center;
+        font-family: 'M PLUS 1p', sans-serif;
+         
+    }
+    nav{
+        background-color:#F5F5DC;
+        display: flex;
+        width: 100vw;
+        height: 20vh;
+        margin-top: 5px;
+      
+    }
+    nav ul{  
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+             
+    }
+    nav ul li{
+        margin: 15px 100px;
+        font-size: 20px;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        font-family: 'M PLUS 1p', sans-serif;
+    
+    }
+    nav ul li:hover{
+        color: #ff80ff;
+        text-decoration: underline;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .area{
+        width: 60vw;
+        height: 15vh;
+        border-radius: 10px;
+        border: 2px solid #F5F5DC;
+        color: grey;
+        font-size: 23px;
+    }
+    form{
+        margin-top:5px;
+        font-size: 20px;
+    }
+    .btn-form{
+        width: 20vw;
+        height: 7vh;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 2px solid black;
+        color:#ff80ff;
+        background-color:#F5F5DC ;
+        margin: 15px;
+       
+    }
+    .btn-form:hover{
+        font-size: 22px;
+    } 
+    form input{
+        width: 40vw;
+        height: 7vh;
+        font-size: 17px;
+    }
+    footer{
+        width: 100%;
+        margin-top: 5px;
+        height: 30vh;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: absolute;
+        
+    }
+    footer ul{
+        align-items: center;
+        font-size: 15px;
+        margin-top: 5px;
+       
+    }
+    .h2-footer{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 25px;
+    }
+    ul li img{
+        width: 25px;
+        height: 25px;
+        transition: 0.2s;
+    }
+    ul li img:hover{
+        width: 30px;
+        height: 30px;
+    }
+    .envio-radio{
+        width: 70px;
+        height: 2vh;
+        text-align: center;
+        margin: 10px;
+    
+    }
+    #contenedor-1{
+        display:grid;
+        margin-top: 15px;
+        grid-template-columns:380px 380px;
+        grid-template-rows:450px 450px;
+        row-gap: 15px;
+        text-align: center;
+        justify-content:space-evenly;
+    
+    }
+   
+}    
+    @media only screen and (min-width:930px){
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative
+        }
+        
+        .franja-animada{
+            display: flex;
+            background-color: #F5F5DC;
+            color: #ff80ff;
+            width:100vw;
+            height: 5vh;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin: 0px;
+            
+        }
+        .coche-img{
+            margin-left: 15px;
+            width: 30px;
+            height: 30px;
+        }
+        .titulo{
+            margin-top: 0;
+            width: 100vw;
+            height: 25vh;
+            background-color: #FFF0F5;
+            color: #ff80ff
+         
+        }
+        .magia-titulo{
+            font-family: 'Festive', cursive;
+            font-size: 65px;    
+        }
+        section h1{
+            padding: 30px;
+            font-size: 45px;
+            text-align: center;
+            font-family: 'M PLUS 1p', sans-serif;
+             
+        }
+        section h2{
+            text-align: center;
+        
+        }
+        nav{
+            background-color:#F5F5DC;
+            display: flex;
+            flex-wrap:wrap; 
+            width: 100vw;
+            height: 8vh;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        nav ul{
+            display: flex;
+            flex-wrap:wrap; 
+            align-items: center;
+            justify-content: space-evenly;
+        
+        }
+        nav ul li{
+            margin: 15px 100px;
+            font-size: 18px;
+            color: black;
+            font-family: 'M PLUS 1p', sans-serif;
+            align-items: center;
+           
+        
+        }
+        nav ul li:hover{
+            color: #ff80ff;
+            text-decoration: underline;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        footer{
+            width: 100%;
+            margin-top: 10px;
+            background-image: url("../img/baner.png");
+            height: 35vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            position: absolute;
+            
+        }
+        footer ul{
+            align-items: center;
+            font-size: 25px;
+            margin-top: 10px;
+           
+        }
+        .h2-footer{
+        font-family: 'M PLUS 1p', sans-serif;
+        }
+        ul li img{
+         transition: 2s;
+        }
+        ul li img:hover{
+            width: 50px;
+        }
+        form{
+    
+            text-align: center;
+            font-size: 25px;
+            font-family: 'M PLUS 1p', sans-serif; 
+            line-height:55px;
+            background: linear-gradient(#F5F5DC, #ff80ff)
+        }
+        form input{
+            width: 50vw;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 10px;
+            border: 2px solid #F5F5DC
+        }
+        .envio-radio{
+            width: 70px;
+            text-align: center;
+            margin: 10px;
+        
+        }
+        #zona{
+            margin:15px;
+            border-radius: 10px;
+            border: 2px solid #F5F5DC;
+          
+        }
+        .area{
+            width: 50vw;
+            height: 25vh;
+            border-radius: 10px;
+            border: 2px solid #F5F5DC;
+            color: grey;
+        }
+        .btn-form{
+            width: 15vw;
+            height: 10vh;
+            border-radius: 10px;
+            border: 2px solid black;
+            color:#ff80ff;
+            background-color:#F5F5DC ;
+            margin: 15px;
+           
+        }
+        .btn-form:hover{
+            font-size: 30px;
+            text-decoration: underline;
+            background-color: black;
+            color: #FFF0F5;
+            border: 4px solid  #FFF0F5
+        }
+        .errores{
+            color: red;
+            width: auto;
+            height: auto;
+            text-align: center
+            
+        
+        }
+        ul li img{
+            width: 25px;
+            height: 25px;
+            transition: 0.2s;
+        }
+        ul li img:hover{
+            width: 30px;
+            height: 30px;
+        }
+        #contenedor-1{
+            display:grid;
+            margin-top: 15px;
+            grid-template-columns:350px 350px 350px;
+            grid-template-rows: 350px 350px 350px;
+            row-gap: 15px;
+            text-align: center;
+            justify-content:space-evenly;
+        
+        }
+    }
+
+

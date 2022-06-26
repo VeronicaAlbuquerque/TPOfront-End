@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=M+PLUS+1p:wght@500&family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
@@ -17,9 +18,9 @@
 </head>
 <body>
     <header>
-        <p class="franja-animada">Envios: CABA $400 GBA $550<img class="coche-img" src="/img/coche.png"></p>
+        <p class="franja-animada">Envios: CABA $400 GBA $550<img class="coche-img" src="../img/coche.png"></p>
         <section class="titulo">
-            <h1 class="animate__animated animate__zoomIn"><img src="/img/bruja.png">M a g i a C a k e s</h1>
+            <h1 class="animate__animated animate__zoomIn magia-titulo"><img src="../img/bruja.png">M a g i a C a k e s</h1>
             <h2>Team Dulce</h2>
         </section>
         <nav>
@@ -31,22 +32,28 @@
         </nav>
     </header>
     <main>
-        <form name="validar-form">
+        <div class="errores">
+           <ul>
+
+           </ul>
+        </div>
+        <form action="#" class="form-padre" name="validar-form">
             <label for="fname">Nombre</label><br>
-            <input type="text" id="fname" name="fname" size="30" maxlength="50"><br>
+            <input type="text" id="fname" name="fname"><br>
             <label for="lname" >Apellido</label><br>
             <input type="text" id="lname" name="lname" size="30" maxlength="50"><br>
             <label for="lname">Mail</label><br>
-            <input type="email" id="lname" name="lname"><br>
+            <input type="text" id="e-name" name="lname"><br>
             <label for="number-cel">Celular</label><br>
-            <input type="number" id="lname" name="lname"><br>
+            <input type="text" id="cel-name" name="lname"><br>
             <label for="number-cel">Con Envío?</label><br>
-            <label for="number-cel">Si</label>
-            <input type="radio" id="envio" name="envio" value="SI">
-            <label for="number-cel">No</label>
-            <input type="radio" id="envio" name="envio" value="NO"><br>
+            <label for="opcion1">Si</label>
+            <input type="radio" class="envio-radio" name="envio" value="SI">
+            <label for="opcion2">No</label>
+            <input type="radio" class="envio-radio" name="envio" value="NO"><br>
             <label for="cars">Elegí tu zona:</label>
             <select id="zona" name="zona"><br>
+                <option value="seleccion"></option>
                 <option value="caba">CABA $550</option>
                 <option value="gbaNorte">GBA NORTE $650</option>
                 <option value="gbaOeste">GBA OESTE $650</option>
@@ -54,10 +61,10 @@
                 <option value="otraZona">Otro $800</option>
             </select><br>
             <textarea class="area" name="consulta">
-                Dejá tu consulta...
+                Deja tu consulta...
             </textarea>
             <hr>
-            <button class="btn-form">Enviar</button>
+            <button class="btn-form" type="submit">Enviar</button>
             
            
        </form>
@@ -66,9 +73,9 @@
     <footer>
         <h2 class="h2-footer footer-productos">Seguinos en redes y compartí tu historia con Magia!</h2>
         <ul type="none" class="redes">
-            <li><img src="/img/instagram (1).png"><a href="https://www.instagram.com/magiacakes/">Instagram</a></li>
-            <li><img src="/img/facebook (1).png"><a href="https://www.facebook.com/magiacakes20">Facebook</a></li>
-            <li><img src="/img/whatsapp.png"><a href="https://web.whatsapp.com">Whatsapp</a></li>
+            <li><img src="../img/instagram (1).png"><a href="https://www.instagram.com/magiacakes/">Instagram</a></li>
+            <li><img src="../img/facebook (1).png"><a href="https://www.facebook.com/magiacakes20">Facebook</a></li>
+            <li><img src="../img/whatsapp.png"><a href="https://web.whatsapp.com">Whatsapp</a></li>
         </ul>
     </footer>
     <script src="formulario.js"></script>
